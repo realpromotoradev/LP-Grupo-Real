@@ -2071,6 +2071,283 @@
         html {
             scroll-behavior: smooth;
         }
+
+        /* Calculator Section */
+        .calculator-section {
+            padding: 6rem 0;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        }
+
+        .calculator-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .calculator-info {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+        }
+
+        .calculator-info h3 {
+            color: #0e505c;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .calculator-info > p {
+            color: #666;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        .formula-box {
+            background: linear-gradient(135deg, #0e505c 0%, #47a8ad 100%);
+            padding: 2rem;
+            border-radius: 15px;
+            margin-bottom: 2rem;
+            color: white;
+        }
+
+        .formula-box h4 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .formula {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            text-align: center;
+            font-family: 'Courier New', monospace;
+        }
+
+        .formula-legend {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.8rem;
+        }
+
+        .formula-legend p {
+            font-size: 0.9rem;
+            margin: 0;
+            padding: 0.5rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+        }
+
+        .calculator-examples {
+            margin-top: 2rem;
+        }
+
+        .calculator-examples h4 {
+            color: #0e505c;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .example-item {
+            padding: 1rem;
+            margin-bottom: 1rem;
+            background: #f8f9fa;
+            border-radius: 10px;
+            border-left: 4px solid #47a8ad;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .example-item strong {
+            color: #0e505c;
+        }
+
+        .calculator-form {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+        }
+
+        .calc-mode-selector {
+            margin-bottom: 2rem;
+        }
+
+        .calc-mode-selector label {
+            display: block;
+            font-weight: 600;
+            color: #0e505c;
+            margin-bottom: 0.8rem;
+            font-size: 1.1rem;
+        }
+
+        .calc-select {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid #e9ecef;
+            border-radius: 12px;
+            font-size: 1rem;
+            font-weight: 600;
+            color: #0e505c;
+            background: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .calc-select:focus {
+            outline: none;
+            border-color: #47a8ad;
+            box-shadow: 0 0 0 3px rgba(71, 168, 173, 0.1);
+        }
+
+        .calc-inputs {
+            display: grid;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .calc-input-group {
+            transition: all 0.3s ease;
+        }
+
+        .calc-input-group.disabled {
+            opacity: 0.4;
+            pointer-events: none;
+        }
+
+        .calc-input-group label {
+            display: block;
+            font-weight: 600;
+            color: #0e505c;
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+
+        .calc-input-group input {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid #e9ecef;
+            border-radius: 12px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .calc-input-group input:focus {
+            outline: none;
+            border-color: #47a8ad;
+            box-shadow: 0 0 0 3px rgba(71, 168, 173, 0.1);
+        }
+
+        .calc-button {
+            width: 100%;
+            padding: 1.2rem;
+            background: linear-gradient(135deg, #0e505c 0%, #47a8ad 100%);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.8rem;
+        }
+
+        .calc-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(14, 80, 92, 0.3);
+        }
+
+        .calc-button:active {
+            transform: translateY(0);
+        }
+
+        .calc-result {
+            margin-top: 2rem;
+            padding: 2rem;
+            background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);
+            border-radius: 12px;
+            border: 2px solid #28a745;
+            display: flex;
+            gap: 1.5rem;
+            animation: slideDown 0.3s ease;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .result-icon {
+            font-size: 2.5rem;
+            color: #28a745;
+        }
+
+        .result-content h4 {
+            color: #155724;
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .result-value {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #0e505c;
+            margin-bottom: 0.5rem;
+        }
+
+        .result-description {
+            color: #155724;
+            font-size: 0.95rem;
+            margin: 0;
+        }
+
+        .calc-error {
+            margin-top: 1.5rem;
+            padding: 1.2rem;
+            background: #f8d7da;
+            border: 2px solid #dc3545;
+            border-radius: 12px;
+            color: #721c24;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            animation: shake 0.3s ease;
+        }
+
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-10px); }
+            75% { transform: translateX(10px); }
+        }
+
+        .calc-error i {
+            font-size: 1.5rem;
+        }
+
+        /* Responsive Calculator */
+        @media (max-width: 968px) {
+            .calculator-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -2092,9 +2369,11 @@
             </div>
             <ul class="nav-links">
                 <li><a href="#home">Início</a></li>
+                <li><a href="#calculadora">Calculadora</a></li>
                 <li><a href="#vantagens">Vantagens</a></li>
                 <li><a href="#como-funciona">Como Funciona</a></li>
                 <li><a href="#depoimentos">Depoimentos</a></li>
+                <li><a href="#faq">FAQ</a></li>
                 <li><a href="#contato">Contato</a></li>
             </ul>
             <a href="#contato" class="cta-button">Simular Agora</a>
@@ -2179,10 +2458,104 @@
         </div>
 
         <div class="hero-bottom">
-            <a href="#vantagens" class="scroll-indicator">
-                <span>Descubra as vantagens</span>
+            <a href="#calculadora" class="scroll-indicator">
+                <span>Faça uma simulação</span>
                 <i class="fas fa-chevron-down"></i>
             </a>
+        </div>
+    </section>
+
+    <!-- Calculator Section -->
+    <section id="calculadora" class="calculator-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Calculadora de Financiamento</h2>
+                <p>Simule seu financiamento com prestações fixas</p>
+            </div>
+
+            <div class="calculator-container">
+                <div class="calculator-info">
+                    <h3>Como funciona?</h3>
+                    <p>Nossa calculadora utiliza o método de juros compostos com capitalização mensal.</p>
+                    <div class="formula-box">
+                        <h4>Fórmula:</h4>
+                        <p class="formula">q₀ = [(1-(1+j)⁻ⁿ) / j] × p</p>
+                        <div class="formula-legend">
+                            <p><strong>n</strong> = Número de Meses</p>
+                            <p><strong>j</strong> = Taxa de Juros Mensal (%)</p>
+                            <p><strong>p</strong> = Valor da Prestação (R$)</p>
+                            <p><strong>q₀</strong> = Valor Financiado (R$)</p>
+                        </div>
+                    </div>
+
+                    <div class="calculator-examples">
+                        <h4>Exemplos práticos:</h4>
+                        <div class="example-item">
+                            <strong>Calcular prazo:</strong> Se você deve R$ 2.000 com juros de 1% ao mês e vai pagar R$ 261,50, em quantos meses quitará?
+                        </div>
+                        <div class="example-item">
+                            <strong>Calcular taxa:</strong> Um bem de R$ 750 em 10 parcelas de R$ 86. Qual a taxa de juros?
+                        </div>
+                        <div class="example-item">
+                            <strong>Calcular prestação:</strong> Um bem de R$ 1.290 em 4 parcelas com taxa de 1,99% ao mês. Qual o valor da prestação?
+                        </div>
+                    </div>
+                </div>
+
+                <div class="calculator-form">
+                    <div class="calc-mode-selector">
+                        <label>O que você deseja calcular?</label>
+                        <select id="calcMode" class="calc-select">
+                            <option value="n">Número de Meses (n)</option>
+                            <option value="j">Taxa de Juros Mensal (j)</option>
+                            <option value="p">Valor da Prestação (p)</option>
+                            <option value="q0">Valor Financiado (q₀)</option>
+                        </select>
+                    </div>
+
+                    <div class="calc-inputs">
+                        <div class="calc-input-group" id="input-n">
+                            <label for="months">Número de Meses (n)</label>
+                            <input type="number" id="months" placeholder="Ex: 12" min="1" step="1">
+                        </div>
+
+                        <div class="calc-input-group" id="input-j">
+                            <label for="rate">Taxa de Juros Mensal (j) %</label>
+                            <input type="number" id="rate" placeholder="Ex: 1.99" min="0" step="0.01">
+                        </div>
+
+                        <div class="calc-input-group" id="input-p">
+                            <label for="payment">Valor da Prestação (p) R$</label>
+                            <input type="number" id="payment" placeholder="Ex: 261.50" min="0" step="0.01">
+                        </div>
+
+                        <div class="calc-input-group" id="input-q0">
+                            <label for="financed">Valor Financiado (q₀) R$</label>
+                            <input type="number" id="financed" placeholder="Ex: 2000.00" min="0" step="0.01">
+                        </div>
+                    </div>
+
+                    <button class="calc-button" onclick="calculate()">
+                        <i class="fas fa-calculator"></i> Calcular
+                    </button>
+
+                    <div id="calc-result" class="calc-result" style="display: none;">
+                        <div class="result-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <div class="result-content">
+                            <h4 id="result-title">Resultado</h4>
+                            <p id="result-value" class="result-value"></p>
+                            <p id="result-description" class="result-description"></p>
+                        </div>
+                    </div>
+
+                    <div id="calc-error" class="calc-error" style="display: none;">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        <span id="error-message"></span>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -2514,7 +2887,7 @@
     </section>
 
     <!-- FAQ Section -->
-    <section class="faq">
+    <section id="faq" class="faq">
         <div class="container">
             <div class="section-title">
                 <h2>Dúvidas Frequentes</h2>
@@ -2843,6 +3216,242 @@
         window.addEventListener('load', () => {
             document.body.style.willChange = 'auto';
         });
+
+        // Calculator functionality
+        const calcMode = document.getElementById('calcMode');
+        const inputs = {
+            n: document.getElementById('input-n'),
+            j: document.getElementById('input-j'),
+            p: document.getElementById('input-p'),
+            q0: document.getElementById('input-q0')
+        };
+
+        // Handle mode change
+        calcMode.addEventListener('change', function() {
+            const selectedMode = this.value;
+
+            // Reset all inputs
+            Object.keys(inputs).forEach(key => {
+                inputs[key].classList.remove('disabled');
+                inputs[key].querySelector('input').removeAttribute('disabled');
+            });
+
+            // Disable the selected input
+            inputs[selectedMode].classList.add('disabled');
+            inputs[selectedMode].querySelector('input').setAttribute('disabled', 'true');
+            inputs[selectedMode].querySelector('input').value = '';
+
+            // Hide result and error
+            document.getElementById('calc-result').style.display = 'none';
+            document.getElementById('calc-error').style.display = 'none';
+        });
+
+        // Initialize on page load
+        calcMode.dispatchEvent(new Event('change'));
+
+        function calculate() {
+            const mode = calcMode.value;
+            const n = parseFloat(document.getElementById('months').value);
+            const j = parseFloat(document.getElementById('rate').value) / 100; // Convert to decimal
+            const p = parseFloat(document.getElementById('payment').value);
+            const q0 = parseFloat(document.getElementById('financed').value);
+
+            // Hide previous results
+            document.getElementById('calc-result').style.display = 'none';
+            document.getElementById('calc-error').style.display = 'none';
+
+            try {
+                let result;
+                let resultText;
+                let description;
+
+                switch(mode) {
+                    case 'n':
+                        if (!j || !p || !q0) {
+                            showError('Preencha todos os campos obrigatórios.');
+                            return;
+                        }
+                        if (j <= 0) {
+                            showError('A taxa de juros deve ser maior que zero.');
+                            return;
+                        }
+                        if (p <= 0 || q0 <= 0) {
+                            showError('Os valores devem ser maiores que zero.');
+                            return;
+                        }
+                        result = calculateMonths(j, p, q0);
+                        if (result <= 0 || !isFinite(result)) {
+                            showError('Não foi possível calcular com esses valores. Verifique se o valor da prestação é suficiente para cobrir os juros.');
+                            return;
+                        }
+                        resultText = `${Math.round(result)} meses`;
+                        description = `Para quitar um empréstimo de R$ ${q0.toFixed(2)} com prestações de R$ ${p.toFixed(2)} e taxa de ${(j * 100).toFixed(2)}% ao mês.`;
+                        break;
+
+                    case 'j':
+                        if (!n || !p || !q0) {
+                            showError('Preencha todos os campos obrigatórios.');
+                            return;
+                        }
+                        if (n <= 0) {
+                            showError('O número de meses deve ser maior que zero.');
+                            return;
+                        }
+                        if (p <= 0 || q0 <= 0) {
+                            showError('Os valores devem ser maiores que zero.');
+                            return;
+                        }
+                        result = calculateRate(n, p, q0);
+                        if (result <= 0 || !isFinite(result)) {
+                            showError('Não foi possível calcular a taxa de juros com esses valores.');
+                            return;
+                        }
+                        resultText = `${(result * 100).toFixed(4)}% ao mês`;
+                        description = `Para um financiamento de R$ ${q0.toFixed(2)} em ${n} parcelas de R$ ${p.toFixed(2)}.`;
+                        break;
+
+                    case 'p':
+                        if (!n || !j || !q0) {
+                            showError('Preencha todos os campos obrigatórios.');
+                            return;
+                        }
+                        if (n <= 0) {
+                            showError('O número de meses deve ser maior que zero.');
+                            return;
+                        }
+                        if (j <= 0) {
+                            showError('A taxa de juros deve ser maior que zero.');
+                            return;
+                        }
+                        if (q0 <= 0) {
+                            showError('O valor financiado deve ser maior que zero.');
+                            return;
+                        }
+                        result = calculatePayment(n, j, q0);
+                        if (result <= 0 || !isFinite(result)) {
+                            showError('Não foi possível calcular o valor da prestação.');
+                            return;
+                        }
+                        resultText = `R$ ${result.toFixed(2)}`;
+                        description = `Para financiar R$ ${q0.toFixed(2)} em ${n} meses com taxa de ${(j * 100).toFixed(2)}% ao mês.`;
+                        break;
+
+                    case 'q0':
+                        if (!n || !j || !p) {
+                            showError('Preencha todos os campos obrigatórios.');
+                            return;
+                        }
+                        if (n <= 0) {
+                            showError('O número de meses deve ser maior que zero.');
+                            return;
+                        }
+                        if (j <= 0) {
+                            showError('A taxa de juros deve ser maior que zero.');
+                            return;
+                        }
+                        if (p <= 0) {
+                            showError('O valor da prestação deve ser maior que zero.');
+                            return;
+                        }
+                        result = calculateFinanced(n, j, p);
+                        if (result <= 0 || !isFinite(result)) {
+                            showError('Não foi possível calcular o valor financiado.');
+                            return;
+                        }
+                        resultText = `R$ ${result.toFixed(2)}`;
+                        description = `Para ${n} prestações de R$ ${p.toFixed(2)} com taxa de ${(j * 100).toFixed(2)}% ao mês.`;
+                        break;
+                }
+
+                showResult(resultText, description);
+
+            } catch (error) {
+                showError('Erro ao realizar o cálculo. Verifique os valores informados.');
+                console.error(error);
+            }
+        }
+
+        // Calculate number of months using the formula: n = -ln(1 - (q0 * j) / p) / ln(1 + j)
+        function calculateMonths(j, p, q0) {
+            const numerator = 1 - (q0 * j) / p;
+            if (numerator <= 0) {
+                return -1; // Invalid case
+            }
+            return -Math.log(numerator) / Math.log(1 + j);
+        }
+
+        // Calculate interest rate using binary search method (approximation)
+        function calculateRate(n, p, q0) {
+            const tolerance = 0.000001;
+            const maxIterations = 100;
+
+            // Binary search bounds
+            let jMin = 0.0001; // 0.01% minimum
+            let jMax = 0.5;    // 50% maximum
+
+            // Check if it's even possible
+            const minQ0 = calculateFinanced(n, jMin, p);
+            const maxQ0 = calculateFinanced(n, jMax, p);
+
+            if (q0 > minQ0 || q0 < maxQ0) {
+                // Try a wider range
+                jMin = 0.00001;
+                jMax = 1.0;
+            }
+
+            // Binary search
+            for (let i = 0; i < maxIterations; i++) {
+                const jMid = (jMin + jMax) / 2;
+                const calcQ0 = calculateFinanced(n, jMid, p);
+                const error = Math.abs(calcQ0 - q0);
+
+                // Check if we found the rate within tolerance
+                if (error < tolerance) {
+                    return jMid;
+                }
+
+                // Adjust search bounds
+                if (calcQ0 > q0) {
+                    // Rate is too low, need higher rate
+                    jMin = jMid;
+                } else {
+                    // Rate is too high, need lower rate
+                    jMax = jMid;
+                }
+            }
+
+            // Return the midpoint as best estimate
+            return (jMin + jMax) / 2;
+        }
+
+        // Calculate payment using the formula: p = q0 * j / (1 - (1 + j)^-n)
+        function calculatePayment(n, j, q0) {
+            return q0 * j / (1 - Math.pow(1 + j, -n));
+        }
+
+        // Calculate financed value using the formula: q0 = ((1 - (1 + j)^-n) / j) * p
+        function calculateFinanced(n, j, p) {
+            return ((1 - Math.pow(1 + j, -n)) / j) * p;
+        }
+
+        function showResult(value, description) {
+            const resultDiv = document.getElementById('calc-result');
+            document.getElementById('result-value').textContent = value;
+            document.getElementById('result-description').textContent = description;
+            resultDiv.style.display = 'flex';
+
+            // Scroll to result
+            resultDiv.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+
+        function showError(message) {
+            const errorDiv = document.getElementById('calc-error');
+            document.getElementById('error-message').textContent = message;
+            errorDiv.style.display = 'flex';
+
+            // Scroll to error
+            errorDiv.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
     </script>
 </body>
 </html>
