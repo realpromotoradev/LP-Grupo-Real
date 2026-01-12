@@ -1021,7 +1021,7 @@
 
         .benefits-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(4, 1fr);
             gap: 2.5rem;
             margin-top: 4rem;
         }
@@ -1277,16 +1277,24 @@
         }
 
         .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            display: flex;
+            flex-direction: column;
             gap: 4rem;
             margin-top: 4rem;
+            align-items: center;
+        }
+
+        .contact-form {
+            width: 100%;
+            max-width: 600px;
         }
 
         .contact-info {
-            display: flex;
-            flex-direction: column;
-            gap: 2.5rem;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem;
+            width: 100%;
+            max-width: 1200px;
         }
 
         .contact-item {
@@ -1417,7 +1425,7 @@
         }
 
         .footer-content {
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
             display: grid;
             grid-template-columns: 2fr 1fr 1fr;
@@ -1435,7 +1443,7 @@
         .footer-section p {
             color: rgba(255,255,255,0.8);
             line-height: 1.8;
-            margin-bottom: 0.8rem;
+            margin-bottom: 0;
         }
 
         .footer-section a {
@@ -1459,6 +1467,7 @@
         .footer-link-consorcio {
             color: #ffd700 !important;
             text-decoration: underline;
+            display: inline !important;
         }
 
         .footer-link-consorcio:hover {
@@ -1781,6 +1790,15 @@
             .stat-card {
                 padding: 1.8rem 1.5rem;
             }
+
+            .contact-info {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 2.5rem;
+            }
+
+            .benefits-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
 
         @media (max-width: 768px) {
@@ -1915,6 +1933,11 @@
 
             .contact-grid {
                 gap: 2.5rem;
+            }
+
+            .contact-info {
+                grid-template-columns: 1fr;
+                gap: 2rem;
             }
 
             .whatsapp-float {
@@ -2397,12 +2420,8 @@
             }
 
             .footer-content {
-                grid-template-columns: 1fr 1fr;
+                grid-template-columns: 1fr;
                 gap: 2.5rem;
-            }
-
-            .footer-section:first-child {
-                grid-column: 1 / -1;
             }
         }
     </style>
@@ -2518,6 +2537,17 @@
             <a href="#calculadora" class="scroll-indicator">
                 <span>Faça uma simulação</span>
                 <i class="fas fa-chevron-down"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Pronto para Conquistar Seus Objetivos?</h2>
+            <p>Faça uma simulação gratuita agora e descubra as melhores condições para o seu crédito consignado</p>
+            <a href="#calculadora" class="btn-primary">
+                <span>Simular Gratuitamente</span>
             </a>
         </div>
     </section>
@@ -2869,17 +2899,6 @@
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="cta-section">
-        <div class="container">
-            <h2>Pronto para Conquistar Seus Objetivos?</h2>
-            <p>Faça uma simulação gratuita agora e descubra as melhores condições para o seu crédito consignado</p>
-            <a href="#contato" class="btn-primary">
-                <span>Simular Gratuitamente</span>
-            </a>
-        </div>
-    </section>
-
     <!-- Testimonials -->
     <section id="depoimentos" class="testimonials">
         <div class="container">
@@ -3017,38 +3036,6 @@
                 <p>Preencha o formulário ou fale conosco pelos canais abaixo</p>
             </div>
             <div class="contact-grid">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fab fa-whatsapp"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h3>WhatsApp</h3>
-                            <p>Atendimento rápido e personalizado</p>
-                            <a href="https://wa.me/5561982083638" target="_blank">(61) 98208-3638</a>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h3>E-mail</h3>
-                            <p>Envie sua mensagem</p>
-                            <a href="mailto:gruporeal.contato@gmail.com">gruporeal.contato@gmail.com</a>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-clock"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h3>Horário de Atendimento</h3>
-                            <p>Segunda a Sexta: 8h às 18h</p>
-                            <p>Sábado: 9h às 13h</p>
-                        </div>
-                    </div>
-                </div>
                 <div class="contact-form">
                     <form id="simulationForm">
                         <div class="form-group">
@@ -3083,6 +3070,38 @@
                         <button type="submit" class="submit-btn">Solicitar Simulação Gratuita</button>
                     </form>
                 </div>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>WhatsApp</h3>
+                            <p>Atendimento rápido e personalizado</p>
+                            <a href="https://wa.me/5561982083638" target="_blank">(61) 98208-3638</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>E-mail</h3>
+                            <p>Envie sua mensagem</p>
+                            <a href="mailto:gruporeal.contato@gmail.com">gruporeal.contato@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Horário de Atendimento</h3>
+                            <p>Segunda a Sexta: 8h às 18h</p>
+                            <p>Sábado: 9h às 13h</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -3092,8 +3111,7 @@
         <div class="footer-content">
             <div class="footer-section">
                 <h3>Sobre o Grupo Real</h3>
-                <p>Especialistas em crédito consignado há mais de 15 anos, oferecendo as melhores condições e taxas do mercado com atendimento humanizado e personalizado.</p>
-                <p>Também somos donos do <a href="https://veiculos.consorciosreal.com/" target="_blank" rel="noopener noreferrer" class="footer-link-consorcio">Consórcios Real</a>, sua melhor opção em consórcios de veículos.</p>
+                <p>Especialistas em crédito consignado há mais de 15 anos, oferecendo as melhores condições e taxas do mercado com atendimento humanizado e personalizado. Também somos donos do <a href="https://veiculos.consorciosreal.com/" target="_blank" rel="noopener noreferrer" class="footer-link-consorcio">Consórcios Real</a>, sua melhor opção em consórcios de veículos.</p>
             </div>
             <div class="footer-section">
                 <h3>Serviços</h3>
