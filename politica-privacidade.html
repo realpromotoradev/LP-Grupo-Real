@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Política de Privacidade - Grupo Real">
+    <title>Política de Privacidade - Grupo Real</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        :root {
+            --primary-dark: #0a3f47;
+            --primary: #0e505c;
+            --primary-light: #47a8ad;
+            --accent: #ffd700;
+            --white: #ffffff;
+            --gray: #666;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: #333;
+            line-height: 1.6;
+            background-color: #f8f9fa;
+        }
+
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1.2rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(14, 80, 92, 0.08);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        nav {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 3rem;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #0e505c 0%, #47a8ad 50%, #0e505c 100%);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: -1px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 3rem;
+        }
+
+        .nav-links a {
+            color: #0e505c;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: color 0.2s ease;
+        }
+
+        .nav-links a:hover {
+            color: #47a8ad;
+        }
+
+        .back-link {
+            background: linear-gradient(135deg, #0e505c 0%, #47a8ad 50%, #0e505c 100%);
+            background-size: 200% auto;
+            color: white;
+            padding: 0.9rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+            box-shadow: 0 6px 20px rgba(14, 80, 92, 0.25);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .back-link:hover {
+            transform: translateY(-3px) scale(1.02);
+        }
+
+        main {
+            max-width: 900px;
+            margin: 120px auto 0;
+            padding: 3rem 2rem;
+            min-height: 80vh;
+        }
+
+        h1 {
+            color: var(--primary);
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            border-bottom: 3px solid var(--primary-light);
+            padding-bottom: 1rem;
+        }
+
+        h2 {
+            color: var(--primary);
+            font-size: 1.8rem;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        h3 {
+            color: var(--primary);
+            font-size: 1.3rem;
+            margin-top: 1.5rem;
+            margin-bottom: 0.8rem;
+        }
+
+        p {
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        ul, ol {
+            margin-left: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        li {
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 0.7rem;
+        }
+
+        .content-box {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            margin-bottom: 2rem;
+            border-left: 5px solid var(--primary-light);
+        }
+
+        footer {
+            background: linear-gradient(135deg, #0e505c 0%, #0a3f47 100%);
+            color: white;
+            padding: 40px 2rem 20px;
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        footer p {
+            color: rgba(255,255,255,0.8);
+            margin-bottom: 0.5rem;
+        }
+
+        footer a {
+            color: #47a8ad;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        footer a:hover {
+            color: #5fc4c9;
+        }
+
+        .back-to-top {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 2rem;
+            padding: 1rem 2rem;
+            background: var(--primary-light);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .back-to-top:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(71, 168, 173, 0.4);
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                padding: 0 1.5rem;
+            }
+
+            .logo {
+                font-size: 1.5rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            main {
+                margin-top: 90px;
+                padding: 2rem 1.5rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            .content-box {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">Grupo Real</a>
+            <ul class="nav-links">
+                <li><a href="index.html#home">Início</a></li>
+                <li><a href="politica-privacidade.html">Política de Privacidade</a></li>
+                <li><a href="termos-uso.html">Termos de Uso</a></li>
+                <li><a href="index.html#contato">Contato</a></li>
+            </ul>
+            <a href="index.html#contato" class="back-link">
+                <i class="fas fa-arrow-left"></i>
+                Voltar
+            </a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>
+            <i class="fas fa-shield-alt"></i> Política de Privacidade
+        </h1>
+
+        <div class="content-box">
+            <p><strong>Última atualização: 2024</strong></p>
+            <p>
+                A Grupo Real ("nós", "nosso" ou "nos") opera o site https://gruporeal.com.br.
+                Esta página informa você sobre nossas políticas em relação à coleta, uso e divulgação de dados pessoais
+                quando você usa nosso serviço e as escolhas que você tem associadas com esses dados.
+            </p>
+        </div>
+
+        <h2>1. Informações que Coletamos</h2>
+        <div class="content-box">
+            <p>Coletamos informações que você nos fornece diretamente, tais como:</p>
+            <ul>
+                <li><strong>Dados de Identificação:</strong> Nome completo, RG, CPF, data de nascimento</li>
+                <li><strong>Dados de Contato:</strong> E-mail, telefone, WhatsApp, endereço residencial</li>
+                <li><strong>Dados Financeiros:</strong> Informações sobre salário, benefícios do INSS, conta bancária</li>
+                <li><strong>Dados Profissionais:</strong> Cargo, instituição empregadora, contracheque</li>
+                <li><strong>Informações do Navegador:</strong> IP, tipo de dispositivo, cookies, dados de navegação</li>
+            </ul>
+        </div>
+
+        <h2>2. Como Usamos Suas Informações</h2>
+        <div class="content-box">
+            <p>Utilizamos as informações coletadas para:</p>
+            <ul>
+                <li>Processar e análise de sua solicitação de crédito</li>
+                <li>Verificar sua elegibilidade para crédito consignado</li>
+                <li>Manter contato sobre sua solicitação e serviços</li>
+                <li>Melhorar nossos serviços e experiência do usuário</li>
+                <li>Conformidade com obrigações legais e regulatórias</li>
+                <li>Prevenir fraudes e atividades ilegais</li>
+                <li>Análise estatística e pesquisa</li>
+            </ul>
+        </div>
+
+        <h2>3. Base Legal para Processamento</h2>
+        <div class="content-box">
+            <p>
+                Processamos seus dados pessoais com base em uma ou mais das seguintes bases legais:
+            </p>
+            <ul>
+                <li>Seu consentimento explícito</li>
+                <li>Execução de contrato de crédito</li>
+                <li>Conformidade com obrigações legais</li>
+                <li>Proteção de interesses legítimos nossos ou de terceiros</li>
+                <li>Razões de interesse público</li>
+            </ul>
+        </div>
+
+        <h2>4. Compartilhamento de Dados</h2>
+        <div class="content-box">
+            <p>
+                Podemos compartilhar suas informações com:
+            </p>
+            <ul>
+                <li><strong>Instituições Financeiras:</strong> Bancos e instituições de crédito parceiras</li>
+                <li><strong>Órgãos Governamentais:</strong> Conforme exigido por lei</li>
+                <li><strong>Provedores de Serviços:</strong> Empresas que nos auxiliam na operação</li>
+                <li><strong>Órgãos Reguladores:</strong> Banco Central, Receita Federal, entre outros</li>
+            </ul>
+            <p>
+                <strong>Nunca vendemos seus dados a terceiros.</strong> Qualquer compartilhamento segue
+                rigorosas proteções e acordos de confidencialidade.
+            </p>
+        </div>
+
+        <h2>5. Segurança de Dados</h2>
+        <div class="content-box">
+            <p>
+                A segurança de seus dados é importante para nós. Implementamos medidas de segurança técnicas e
+                organizacionais adequadas para proteger suas informações contra acesso, alteração, divulgação ou
+                destruição não autorizadas, incluindo:
+            </p>
+            <ul>
+                <li>Criptografia SSL/TLS para transmissão de dados</li>
+                <li>Autenticação de múltiplos fatores</li>
+                <li>Monitoramento contínuo de segurança</li>
+                <li>Treinamento regular de equipe</li>
+                <li>Política de acesso restrito aos dados</li>
+            </ul>
+            <p>
+                No entanto, nenhum método de transmissão pela Internet é 100% seguro. Embora façamos nossos melhores
+                esforços para proteger seus dados, não podemos garantir segurança absoluta.
+            </p>
+        </div>
+
+        <h2>6. Retenção de Dados</h2>
+        <div class="content-box">
+            <p>
+                Retemos seus dados pessoais apenas pelo tempo necessário para os fins para os quais foram coletados,
+                ou conforme exigido por lei. Geralmente:
+            </p>
+            <ul>
+                <li>Dados de crédito: Mantidos durante toda a vigência do contrato + 7 anos</li>
+                <li>Dados de solicitação rejeitada: Mantidos por 1 ano</li>
+                <li>Dados de navegação: Retidos por até 12 meses</li>
+            </ul>
+        </div>
+
+        <h2>7. Seus Direitos</h2>
+        <div class="content-box">
+            <p>
+                De acordo com a Lei Geral de Proteção de Dados (LGPD), você tem o direito de:
+            </p>
+            <ul>
+                <li><strong>Acessar:</strong> Solicitar acesso aos dados que temos sobre você</li>
+                <li><strong>Corrigir:</strong> Corrigir dados inexatos ou incompletos</li>
+                <li><strong>Excluir:</strong> Solicitar a exclusão de seus dados (direito ao esquecimento)</li>
+                <li><strong>Restringir:</strong> Restringir o processamento de seus dados</li>
+                <li><strong>Portabilidade:</strong> Receber seus dados em formato estruturado</li>
+                <li><strong>Revogar Consentimento:</strong> Revogar seu consentimento a qualquer momento</li>
+            </ul>
+            <p>
+                Para exercer qualquer destes direitos, entre em contato conosco através do e-mail
+                <a href="mailto:gruporeal.contato@gmail.com">gruporeal.contato@gmail.com</a>.
+            </p>
+        </div>
+
+        <h2>8. Cookies</h2>
+        <div class="content-box">
+            <p>
+                Utilizamos cookies para melhorar sua experiência de navegação. Você pode controlar os cookies através
+                das configurações do seu navegador. A desabilitação de cookies pode afetar a funcionalidade do site.
+            </p>
+        </div>
+
+        <h2>9. Terceiros</h2>
+        <div class="content-box">
+            <p>
+                Nosso site pode conter links para sites de terceiros. Esta Política de Privacidade não se aplica a
+                sites de terceiros, e não somos responsáveis pelas práticas de privacidade deles.
+                Recomendamos revisar a política de privacidade de qualquer site antes de fornecer informações pessoais.
+            </p>
+        </div>
+
+        <h2>10. Alterações nesta Política</h2>
+        <div class="content-box">
+            <p>
+                Podemos atualizar esta Política de Privacidade periodicamente. Notificaremos você sobre alterações
+                significativas enviando um e-mail ou publicando a nova Política de Privacidade no site.
+                Sua continuação do uso do site após alterações constitui aceitação da Política revisada.
+            </p>
+        </div>
+
+        <h2>11. Contato</h2>
+        <div class="content-box">
+            <p>
+                Se você tem dúvidas sobre esta Política de Privacidade ou nossos práticas de privacidade,
+                entre em contato conosco:
+            </p>
+            <ul>
+                <li><strong>E-mail:</strong> <a href="mailto:gruporeal.contato@gmail.com">gruporeal.contato@gmail.com</a></li>
+                <li><strong>WhatsApp:</strong> <a href="https://wa.me/5561982083638">(61) 98208-3638</a></li>
+                <li><strong>Endereço:</strong> Brasília, DF - Brasil</li>
+            </ul>
+        </div>
+
+        <div style="text-align: center; margin-top: 3rem;">
+            <a href="index.html" class="back-to-top">
+                <i class="fas fa-arrow-left"></i>
+                Voltar à Página Principal
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Grupo Real - Especialista em Crédito. Todos os direitos reservados.</p>
+            <p>Desenvolvido com <i class="fas fa-heart" style="color: #47a8ad;"></i></p>
+            <p>
+                <a href="politica-privacidade.html">Política de Privacidade</a> |
+                <a href="termos-uso.html">Termos de Uso</a>
+            </p>
+        </div>
+    </footer>
+</body>
+</html>

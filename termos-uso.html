@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Termos de Uso - Grupo Real">
+    <title>Termos de Uso - Grupo Real</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        :root {
+            --primary-dark: #0a3f47;
+            --primary: #0e505c;
+            --primary-light: #47a8ad;
+            --accent: #ffd700;
+            --white: #ffffff;
+            --gray: #666;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: #333;
+            line-height: 1.6;
+            background-color: #f8f9fa;
+        }
+
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1.2rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(14, 80, 92, 0.08);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        nav {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 3rem;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #0e505c 0%, #47a8ad 50%, #0e505c 100%);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: -1px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 3rem;
+        }
+
+        .nav-links a {
+            color: #0e505c;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: color 0.2s ease;
+        }
+
+        .nav-links a:hover {
+            color: #47a8ad;
+        }
+
+        .back-link {
+            background: linear-gradient(135deg, #0e505c 0%, #47a8ad 50%, #0e505c 100%);
+            background-size: 200% auto;
+            color: white;
+            padding: 0.9rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+            box-shadow: 0 6px 20px rgba(14, 80, 92, 0.25);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .back-link:hover {
+            transform: translateY(-3px) scale(1.02);
+        }
+
+        main {
+            max-width: 900px;
+            margin: 120px auto 0;
+            padding: 3rem 2rem;
+            min-height: 80vh;
+        }
+
+        h1 {
+            color: var(--primary);
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            border-bottom: 3px solid var(--primary-light);
+            padding-bottom: 1rem;
+        }
+
+        h2 {
+            color: var(--primary);
+            font-size: 1.8rem;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        h3 {
+            color: var(--primary);
+            font-size: 1.3rem;
+            margin-top: 1.5rem;
+            margin-bottom: 0.8rem;
+        }
+
+        p {
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        ul, ol {
+            margin-left: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        li {
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 0.7rem;
+        }
+
+        .content-box {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            margin-bottom: 2rem;
+            border-left: 5px solid var(--primary-light);
+        }
+
+        .alert {
+            background: #fff3cd;
+            border-left: 5px solid #ffc107;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+
+        .alert strong {
+            color: #856404;
+        }
+
+        footer {
+            background: linear-gradient(135deg, #0e505c 0%, #0a3f47 100%);
+            color: white;
+            padding: 40px 2rem 20px;
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        footer p {
+            color: rgba(255,255,255,0.8);
+            margin-bottom: 0.5rem;
+        }
+
+        footer a {
+            color: #47a8ad;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        footer a:hover {
+            color: #5fc4c9;
+        }
+
+        .back-to-top {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 2rem;
+            padding: 1rem 2rem;
+            background: var(--primary-light);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .back-to-top:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(71, 168, 173, 0.4);
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                padding: 0 1.5rem;
+            }
+
+            .logo {
+                font-size: 1.5rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            main {
+                margin-top: 90px;
+                padding: 2rem 1.5rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            .content-box {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">Grupo Real</a>
+            <ul class="nav-links">
+                <li><a href="index.html#home">Início</a></li>
+                <li><a href="politica-privacidade.html">Política de Privacidade</a></li>
+                <li><a href="termos-uso.html">Termos de Uso</a></li>
+                <li><a href="index.html#contato">Contato</a></li>
+            </ul>
+            <a href="index.html#contato" class="back-link">
+                <i class="fas fa-arrow-left"></i>
+                Voltar
+            </a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>
+            <i class="fas fa-file-contract"></i> Termos de Uso
+        </h1>
+
+        <div class="content-box">
+            <p><strong>Última atualização: 2024</strong></p>
+            <p>
+                Bem-vindo aos Termos de Uso da Grupo Real. Ao acessar e usar este site e nossos serviços,
+                você concorda em estar vinculado por estes termos. Se você não concorda com alguma parte destes termos,
+                por favor, não use nossos serviços.
+            </p>
+        </div>
+
+        <div class="alert">
+            <strong><i class="fas fa-exclamation-triangle"></i> Aviso Importante:</strong>
+            Ao se cadastrar no site e enviar informações pessoais, você reconhece que está solicitando
+            um empréstimo e autoriza o Grupo Real a consultar e obter informações sobre você.
+        </div>
+
+        <h2>1. Definições</h2>
+        <div class="content-box">
+            <ul>
+                <li><strong>"Serviço":</strong> Refere-se ao site do Grupo Real e aos serviços de crédito consignado</li>
+                <li><strong>"Usuário":</strong> Qualquer pessoa que acessa ou usa o Serviço</li>
+                <li><strong>"Conteúdo":</strong> Qualquer texto, imagem, vídeo, som ou outro material disponível no site</li>
+                <li><strong>"Aplicação":</strong> Seu pedido de crédito consignado submetido através do site</li>
+            </ul>
+        </div>
+
+        <h2>2. Direitos e Responsabilidades do Usuário</h2>
+        <div class="content-box">
+            <h3>2.1 Elegibilidade</h3>
+            <p>
+                Para usar nossos serviços, você deve ter:
+            </p>
+            <ul>
+                <li>Pelo menos 18 anos de idade</li>
+                <li>Ser aposentado/pensionista do INSS, servidor público ou funcionário de empresa conveniada</li>
+                <li>Ter uma conta bancária ativa</li>
+                <li>Ser elegível conforme nossa análise de crédito</li>
+            </ul>
+
+            <h3>2.2 Informações Precisas</h3>
+            <p>
+                Você concorda em fornecer informações precisas, completas e atualizadas durante o processo de inscrição.
+                Qualquer informação falsa ou enganosa pode resultar na rejeição de sua aplicação ou cancelamento de crédito.
+            </p>
+
+            <h3>2.3 Senhas e Contas</h3>
+            <p>
+                Você é responsável por manter a confidencialidade de sua senha e informações de acesso.
+                Você é responsável por todas as atividades que ocorrem sob sua conta.
+            </p>
+        </div>
+
+        <h2>3. Processo de Crédito</h2>
+        <div class="content-box">
+            <h3>3.1 Simulação</h3>
+            <p>
+                A simulação realizada através do calculador é apenas indicativa. O valor final do crédito
+                pode variar conforme análise de risco e documentação fornecida.
+            </p>
+
+            <h3>3.2 Aprovação</h3>
+            <p>
+                A aprovação do crédito está condicionada a:
+            </p>
+            <ul>
+                <li>Análise positiva do seu histórico de crédito</li>
+                <li>Verificação de documentação</li>
+                <li>Confirmação de elegibilidade</li>
+                <li>Assinatura de contrato de crédito</li>
+            </ul>
+
+            <h3>3.3 Prazo de Depósito</h3>
+            <p>
+                O dinheiro é depositado em até 24 horas úteis após aprovação final e assinatura do contrato.
+                Não somos responsáveis por atrasos causados por problemas bancários.
+            </p>
+
+            <h3>3.4 Recusa</h3>
+            <p>
+                O Grupo Real reserva-se o direito de recusar qualquer aplicação, com ou sem motivo explicado,
+                em conformidade com a legislação de proteção ao consumidor.
+            </p>
+        </div>
+
+        <h2>4. Taxas e Encargos</h2>
+        <div class="content-box">
+            <ul>
+                <li>Não há taxa de inscrição ou simulação</li>
+                <li>Não há taxa de processamento ou aprovação</li>
+                <li>Os juros são apenas aqueles contratados no empréstimo</li>
+                <li>Não há cobranças ocultas ou surpresas</li>
+            </ul>
+            <p>
+                Todos os custos são informados no contrato de crédito antes da assinatura.
+                Se você tiver dúvidas, entre em contato conosco antes de assinar.
+            </p>
+        </div>
+
+        <h2>5. Contrato de Crédito</h2>
+        <div class="content-box">
+            <p>
+                O contrato de crédito consignado é um instrumento legal que estabelece:
+            </p>
+            <ul>
+                <li>Valor do empréstimo</li>
+                <li>Taxa de juros mensal</li>
+                <li>Número de parcelas e valor de cada parcela</li>
+                <li>Prazo de vigência</li>
+                <li>Direitos e obrigações das partes</li>
+                <li>Desconto automático em folha de pagamento/benefício</li>
+            </ul>
+            <p>
+                Você se compromete a cumprir todas as obrigações estabelecidas no contrato.
+            </p>
+        </div>
+
+        <h2>6. Desconto em Folha</h2>
+        <div class="content-box">
+            <p>
+                Você autoriza expressamente o Grupo Real a:
+            </p>
+            <ul>
+                <li>Solicitar ao seu empregador/INSS o desconto automático das parcelas</li>
+                <li>Efetuar o desconto diretamente em sua folha de pagamento ou benefício</li>
+                <li>Receber o comprovante de desconto da instituição pagadora</li>
+            </ul>
+            <p>
+                O desconto em folha é obrigatório para este tipo de crédito conforme regulamentação vigente.
+            </p>
+        </div>
+
+        <h2>7. Cancelamento e Devolução</h2>
+        <div class="content-box">
+            <p>
+                Você tem direito de cancelar sua solicitação no prazo de até 7 dias úteis após a aprovação e
+                assinatura do contrato, conforme o Código de Defesa do Consumidor. Neste caso, as parcelas
+                devidas até aquele momento devem ser pagas.
+            </p>
+        </div>
+
+        <h2>8. Portabilidade</h2>
+        <div class="content-box">
+            <p>
+                Você pode transferir seu crédito consignado para outra instituição.
+                O Grupo Real facilitará este processo e fornecerá toda documentação necessária sem cobranças adicionais.
+            </p>
+        </div>
+
+        <h2>9. Restrições de Uso</h2>
+        <div class="content-box">
+            <p>Você concorda que não irá:</p>
+            <ul>
+                <li>Usar o site para qualquer fim ilegal ou não autorizado</li>
+                <li>Assediar ou causar dano a qualquer pessoa</li>
+                <li>Violar qualquer lei ou regulamento aplicável</li>
+                <li>Intrometer-se nos sistemas de segurança ou de rede</li>
+                <li>Fornecer informações falsas ou enganosas</li>
+                <li>Usar o site de forma que congestionaria ou danificaria os servidores</li>
+            </ul>
+        </div>
+
+        <h2>10. Propriedade Intelectual</h2>
+        <div class="content-box">
+            <p>
+                Todo conteúdo do site, incluindo texto, imagens, logos, designs e código, é propriedade do Grupo Real
+                ou de seus fornecedores de conteúdo e é protegido por leis de propriedade intelectual.
+                Você não pode copiar, modificar, distribuir ou transmitir qualquer conteúdo sem permissão.
+            </p>
+        </div>
+
+        <h2>11. Isenção de Responsabilidade</h2>
+        <div class="content-box">
+            <p>
+                O site e serviços são fornecidos "como estão" e "conforme disponível" sem garantias de qualquer tipo.
+                O Grupo Real não garante que:
+            </p>
+            <ul>
+                <li>O site funcionará sem interrupções ou erros</li>
+                <li>Os erros serão corrigidos</li>
+                <li>O site ou servidores estão livres de vírus ou componentes prejudiciais</li>
+                <li>Todas as informações estão precisas ou completas</li>
+            </ul>
+        </div>
+
+        <h2>12. Limitação de Responsabilidade</h2>
+        <div class="content-box">
+            <p>
+                Em nenhuma circunstância o Grupo Real será responsável por danos indiretos, incidentais,
+                especiais, consequentes ou punitivos, mesmo que avisado da possibilidade de tais danos,
+                resultantes de seu uso ou incapacidade de usar o site ou serviços.
+            </p>
+        </div>
+
+        <h2>13. Indenização</h2>
+        <div class="content-box">
+            <p>
+                Você concorda em indenizar e manter indemne o Grupo Real, seus diretores, funcionários
+                e agentes de qualquer reclamação, dano, perda ou despesa (incluindo honorários advocatícios)
+                resultantes do seu uso do site ou violação destes Termos.
+            </p>
+        </div>
+
+        <h2>14. Links para Terceiros</h2>
+        <div class="content-box">
+            <p>
+                Nosso site pode conter links para sites de terceiros. Não somos responsáveis pelo conteúdo,
+                precisão ou práticas de sites de terceiros. Seu uso de sites de terceiros é por sua conta e risco
+                e está sujeito aos seus termos de uso.
+            </p>
+        </div>
+
+        <h2>15. Modificações aos Termos</h2>
+        <div class="content-box">
+            <p>
+                O Grupo Real reserva-se o direito de modificar estes Termos a qualquer momento.
+                As modificações entram em vigor imediatamente após publicação no site.
+                Seu uso continuado do site após modificações constitui sua aceitação dos Termos revisados.
+            </p>
+        </div>
+
+        <h2>16. Lei Aplicável</h2>
+        <div class="content-box">
+            <p>
+                Estes Termos são regidos pelas leis da República Federativa do Brasil,
+                especificamente pelas leis federais aplicáveis a instituições de crédito e proteção ao consumidor.
+                Qualquer disputa será submetida aos tribunais competentes.
+            </p>
+        </div>
+
+        <h2>17. Conformidade Regulatória</h2>
+        <div class="content-box">
+            <p>
+                O Grupo Real está sujeito à supervisão e regulamentação do:
+            </p>
+            <ul>
+                <li>Banco Central do Brasil</li>
+                <li>Conselho Monetário Nacional</li>
+                <li>Ministério da Economia</li>
+                <li>Código de Defesa do Consumidor</li>
+                <li>Lei Geral de Proteção de Dados (LGPD)</li>
+            </ul>
+        </div>
+
+        <h2>18. Contato para Dúvidas</h2>
+        <div class="content-box">
+            <p>
+                Se você tem dúvidas sobre estes Termos de Uso, entre em contato conosco:
+            </p>
+            <ul>
+                <li><strong>E-mail:</strong> <a href="mailto:gruporeal.contato@gmail.com">gruporeal.contato@gmail.com</a></li>
+                <li><strong>WhatsApp:</strong> <a href="https://wa.me/5561982083638">(61) 98208-3638</a></li>
+                <li><strong>Horário:</strong> Segunda a Sexta: 8h às 18h | Sábado: 9h às 13h</li>
+            </ul>
+        </div>
+
+        <div style="text-align: center; margin-top: 3rem;">
+            <a href="index.html" class="back-to-top">
+                <i class="fas fa-arrow-left"></i>
+                Voltar à Página Principal
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Grupo Real - Especialista em Crédito. Todos os direitos reservados.</p>
+            <p>Desenvolvido com <i class="fas fa-heart" style="color: #47a8ad;"></i></p>
+            <p>
+                <a href="politica-privacidade.html">Política de Privacidade</a> |
+                <a href="termos-uso.html">Termos de Uso</a>
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
