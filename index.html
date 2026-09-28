@@ -160,6 +160,76 @@
             transform: translate3d(0, 0, 0);
         }
 
+        .nav-dropdown {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-dropdown-btn {
+            background: none;
+            border: none;
+            color: #0e505c;
+            font-weight: 600;
+            font-size: 0.95rem;
+            cursor: pointer;
+            padding: 0.5rem 1rem;
+            transition: color 0.2s ease;
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .nav-dropdown-btn:hover {
+            color: #47a8ad;
+        }
+
+        .nav-dropdown-content {
+            display: none;
+            position: absolute;
+            background: white;
+            min-width: 250px;
+            box-shadow: 0 8px 20px rgba(14, 80, 92, 0.15);
+            border-radius: 12px;
+            border: 1px solid rgba(71, 168, 173, 0.2);
+            top: 100%;
+            right: 0;
+            z-index: 1001;
+            margin-top: 0.5rem;
+            animation: slideDown 0.3s ease-out;
+        }
+
+        .nav-dropdown-content a {
+            display: block;
+            color: #0e505c;
+            text-decoration: none;
+            padding: 1rem 1.5rem;
+            transition: all 0.2s ease;
+            border-left: 4px solid transparent;
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+
+        .nav-dropdown-content a:first-child {
+            border-radius: 12px 12px 0 0;
+        }
+
+        .nav-dropdown-content a:last-child {
+            border-radius: 0 0 12px 12px;
+        }
+
+        .nav-dropdown-content a:hover {
+            background: #f8f9fa;
+            border-left-color: #47a8ad;
+            color: #47a8ad;
+            padding-left: 2rem;
+        }
+
+        .nav-dropdown:hover .nav-dropdown-content {
+            display: block;
+        }
+
         .cta-button {
             background: linear-gradient(135deg, #0e505c 0%, #47a8ad 50%, #0e505c 100%);
             background-size: 200% auto;
@@ -2452,12 +2522,18 @@
                 <li><a href="#calculadora">Calculadora</a></li>
                 <li><a href="#vantagens">Vantagens</a></li>
                 <li><a href="#como-funciona">Como Funciona</a></li>
-                <li><a href="#depoimentos">Depoimentos</a></li>
                 <li><a href="#faq">FAQ</a></li>
-                <li><a href="politica-privacidade.html">Privacidade</a></li>
-                <li><a href="termos-uso.html">Termos</a></li>
                 <li><a href="#contato">Contato</a></li>
             </ul>
+            <div class="nav-dropdown">
+                <button class="nav-dropdown-btn">
+                    <i class="fas fa-file-alt"></i> Políticas
+                </button>
+                <div class="nav-dropdown-content">
+                    <a href="politica-privacidade.html">Política de Privacidade</a>
+                    <a href="termos-uso.html">Termos de Uso</a>
+                </div>
+            </div>
             <a href="#contato" class="cta-button">Simular Agora</a>
         </nav>
     </header>
